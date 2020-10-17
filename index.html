@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>計算表</title>
+</head>
+<body>
+    <h2>元金入力欄に入力した値に二倍掛けた値を計算結果に出力欄に出力します。</h2>
+    <a class="In">元金入力欄</a><input type="text"><!--元金入力欄-->
+    <a class="Out">計算結果</a><input type="text"><!--計算結果出力欄-->
+
+    <form id="form1" action="#" method="POST">
+        <input type="text" id="input_message" value="">
+        <input type="button" onclick="func1()" value="送信">
+    </form>
+    <div id="output_message"></div>
+    <script language="javascript" type="text/javascript">
+        function func1(){
+            var input_message = document.getElementById("input_message").value;
+            var baisuu = parseInt(input_message, 10);
+            baisuu=baisuu*2;
+            var s = String(baisuu); //=> "100"
+            // console.log(baisuu);
+            // console.log(s);
+            document.getElementById("output_message").innerHTML = s;
+        }
+    </script>
+</body>
+</html>
